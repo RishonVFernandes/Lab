@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+
+<head>
+</head>
+<style>
+	body {
+		background-image: linear-gradient(to right, yellow, orange, red);
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+
+	}
+
+	.left-box {
+		height: 100vh;
+
+	}
+
+	.title {
+		text-align: center;
+
+	}
+
+	.title>p {
+		font-size: 2rem;
+		font-family: Halvetica;
+		font-weight: 900;
+	}
+
+	.right-box {
+		height: 100vh;
+		position: relative;
+		padding-inline: 20px;
+	}
+
+	.text {
+		background-color: yellow;
+		border-radius: 20px 20px 20px 0;
+		padding: 10px;
+		width: 200px;
+		border: 1px solid black;
+	}
+
+	.text:nth-child(even) {
+		border-radius: 20px 20px 0 20px;
+		margin-left: 200px;
+	}
+
+	.chatBox {
+		overflow-y: scroll;
+		scrollbar-width: thin;
+		scrollbar-color: red;
+		height: 500px;
+		width: 400px;
+	}
+
+	.text-him {
+		position: absolute;
+	}
+
+	input {
+		width: 350px;
+		height: 30px;
+		caret-color: orange;
+	}
+
+	button {
+		width: 70px;
+		height: 35px;
+	}
+
+
+	.sticker {
+		width: 40px;
+		height: 40px;
+	}
+</style>
+
+<body>
+
+	<div class="left-box">
+		<div class="title">
+			<p> Hello</p>
+			<p> It's Me</p>
+		</div>
+
+		<img src="garfield-movie.webp" style="border:10px solid red">
+	</div>
+
+	<div class="right-box">
+		<h1> Talk with me </h1>
+		<div class="chatBox" id="chatBox">
+
+
+
+
+		</div>
+
+
+		<div class="text-him">
+			<input type="text" placeholder="type something ......" id="message">
+			<button onclick="return sendMessage()">Send</button>
+		</div>
+	</div>
+
+
+
+</body>
+<script>
+	
+
+	// const localStorageMessage = localStorage.getItem('firstItem');
+
+
+	const sendMessage = () => {
+		const message = document.getElementById('message').value;
+	const chatBox = document.getElementById('chatBox');
+
+		// localStorage.setItem('firstItem', message);
+
+		const newMessage = document.createElement('p');
+		newMessage.innerText = message;
+		newMessage.className = "text";
+		chatBox.appendChild(newMessage);
+	}
+
+</script>
+
+</html>
