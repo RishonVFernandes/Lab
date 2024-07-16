@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="area"></p>
+
+    <script>
+        
+            let areaDisplay = document.getElementById('area');
+
+            let a = parseInt(prompt('Enter side A'));
+            let b = parseInt(prompt('Enter side A'));
+            let c = parseInt(prompt('Enter side A'));
+
+            if (a == b && b == c) {
+                areaDisplay.innerHTML = "triangle is equilateral";
+            }
+            else if ((a == b && a != c) || (a == c && a != b)) {
+                areaDisplay.innerHTML = "triangle is isoceles";
+            }
+            else {
+                areaDisplay.innerHTML = "triangle is scalene";
+
+            }
+        
+    </script>
+</body>
+</html>

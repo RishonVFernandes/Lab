@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input {
+        width: 200px;
+    }
+</style>
+
+<body>
+
+    <div>
+        <label for="valA">Enter value for A :</label>
+        <input type="text" id="valA">
+
+        <label for="valB">Enter value for B :</label>
+        <input type="text" id="valB">
+
+        <label for="valC">Enter number for C :</label>
+        <input type="text" id="valC">
+    </div>
+    <button onclick="return calculateArea()">Calculate Area</button>
+
+    <p id="area"></p>
+    <script>
+        function calculateArea() {
+            let areaDisplay = document.getElementById('area');
+
+            let a = parseInt(document.getElementById('valA').value);
+            let b = parseInt(document.getElementById('valB').value);
+            let c = parseInt(document.getElementById('valC').value);
+            
+            let s = (a + b + c) / 2;
+
+            let area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+
+            areaDisplay.innerHTML = `The area of the triangle is ${area}  unit <sup>2</sup>`;
+            console.log(area);
+        }
+
+    </script>
+</body>
+
+</html>
