@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    ::placeholder{
+        color: white;
+    }
+</style>
+<body>
+
+    <div class="content">content content content content content content</div>
+    <div class="content">content content content content content content</div>
+    <div class="content">content content content content content content</div>
+
+    <div class="content1">content content content content content content</div>
+    <div class="content1">content content content content content content</div>
+    <div class="content1">content content content content content content</div>
+
+    <input type="button" value="Change" onclick="return changeColor()">
+
+    <input type="button" onclick="return makeTextBox()" id="makeBox" value="Make New Text Box">
+    <input type="button" onclick="return removeTextBox()" id="removeBox" value="Remove Text Box">
+
+    <input type="text" class="newTextBox" id="newTextBox" style="display: none; ">
+    <script>
+
+        function changeColor() {
+
+            let allDivs = document.getElementsByClassName('content');
+
+            let allNewDivs = document.getElementsByClassName('content1');
+
+            allDivs[0].style.color = 'red';
+            allDivs[1].style.color = 'lime';
+            allNewDivs[1].style.color = 'blue';
+
+
+        }
+
+        let newTextBox = document.getElementById('newTextBox');
+        function makeTextBox() {
+
+            newTextBox.style.display = 'block';
+            newTextBox.style.backgroundColor = 'red';
+            newTextBox.style.color = 'white';
+            newTextBox.setAttribute('placeholder', 'type here...')
+        }
+        function removeTextBox() {
+            newTextBox.style.display = 'none';
+            newTextBox.value = '';
+        }
+    </script>
+</body>
+
+</html>

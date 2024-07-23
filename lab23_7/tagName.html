@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <ul>
+        <li>IS</li>
+        <li>V Ed</li>
+        <li>Web Tech</li>
+        <li>Web Tech</li>
+        <li>Web Tech</li>
+        <li>Web Tech</li>
+
+    </ul>
+
+    <div id="result"></div>
+    <script>
+        let items = document.getElementsByTagName('li');
+        let result = document.getElementById('result');
+        
+        for(let i = 0; i < items.length; i++){
+            
+            result.innerHTML+=items[i].innerHTML + "<br>";
+        }
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var temp = 0; // 'temp' is global value can be used in all funtion
+        let t = 7;  // 't' is global value can be used in all funtion
+
+        function calcu() {
+            var cel = 91; //'cel' can be used only in calcu funtion
+            let far = 9; // 'far' can be used in the function
+            if (cel == 91) {
+                let a = 5;   // scope of 'a' is block scope i.e.  no reference outside
+            }
+            
+            else {
+                var b = 6;  // scope of 'b'  is function block
+            }
+            console.log(a);
+            console.log(b);
+
+            //value of 'a' is not accessible
+            //value of 'b' is  accessible
+
+        }
+
+        function calcu123() {
+            var i = 6;
+        }
+        calcu();
+        calcu123();
+
+    </script>
+</body>
+
+</html>
