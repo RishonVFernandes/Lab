@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h3>Mouse up and mouse down</h3>
+
+<p id="p1" onmousedown="down()" onmouseup="up()" onclick="onme">
+    content content content content content content content
+    content content content content content content content
+    content content content content content content content
+    content content content content content content content
+    content content content content content content content
+    content content content content content content content
+    content content content content content content content
+</p>
+
+<script>
+    let p1 = document.getElementById('p1');
+
+    function up(){
+        p1.style.color = "yellow";
+        p1.style.fontSize = "20px";
+    }
+    function down(){
+        p1.style.color = "lime";
+        p1.style.fontSize = "30px";
+    }
+    function onme(){
+        // alert('u clicked on me');
+    }
+</script>
+    
+</body>
+</html>

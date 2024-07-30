@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+</style>
+<body>
+
+    <label for="first-name">First Name</label>
+    <input type="text" id="first-name" name="first-name">
+    <label for="last-name">Last Name</label>
+    <input type="text" id="last-name" name="last-name">
+
+    <button id="btn" onclick="return submit()">Generate Full Name</button>
+
+    <p id="fullname"></p>
+
+    <script>
+
+function submit(){
+    let last_name = document.getElementsByName('last-name');
+    let first_name = document.getElementsByName('first-name');
+
+    let fullName = document.getElementById("fullname")
+    fullName.innerHTML = first_name[0].value +" "+last_name[0].value;
+    fullName.style.color = 'green';
+    fullName.style.textTransform = 'uppercase';
+
+}
+    </script>
+</body>
+
+</html>

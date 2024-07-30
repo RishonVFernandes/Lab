@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+</style>
+
+<body>
+
+    <label for="name">Enter Name</label>
+    <input type="text" id="name">;
+    <span id="span1"></span>
+
+    <label for="lastname">Enter Name</label>
+    <input type="text" id="lastname">;
+    <span id="span2"></span>
+
+    <button onclick="return submit()">Click</button>
+
+
+    <script>
+
+        let name = document.getElementById('name');
+        let lastname = document.getElementById('lastname');
+
+        function submit() {
+
+            if(name.value.trim().length==0){
+                document.getElementById('span1').innerHTML = "Enter Your First Name";
+            }
+            if(lastname.value.trim() == ""){
+                document.getElementById('span2').innerHTML = "Enter Your Last Name";
+            }
+
+            span1.style.color = 'red';
+            span2.style.color = 'red';
+
+
+        }
+    </script>
+</body>
+
+</html>

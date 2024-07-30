@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="success.html" name="myForm" onsubmit="return validateForm()" method="get">
+
+        Add Your Feedback:
+        1 <input type="radio" name="rate">
+        2 <input type="radio" name="rate">
+        3 <input type="radio" name="rate">
+
+        <br>
+        What did you like about the app :
+        <input type="checkbox" name="UI">good UI
+        <input type="checkbox" name="FAST">fast speed
+        <input type="checkbox" name="CONTENT">liked the content
+
+        <br>
+        <input type="submit" value="SUBMIT" onclick="return validate()">
+
+    </form>
+
+    <script>
+        function validate() {
+            if (!document.myForm.rate[0].checked && !document.myForm.rate[1].checked && !document.myForm.rate[2].checked) {
+                alert('check radio');
+                return false;
+            }
+
+            if (!document.myForm.UI.checked && !document.myForm.FAST.checked && !document.myForm.CONTENT.checked) {
+                alert('check checkbox');
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
+
