@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    div{
+        width: 300px;
+        height: 200px;
+        border: 2px solid black;
+        background-color: blue;
+    }
+</style>
+<body>
+
+    <div id="div1" onmousemove="moveD(event)" onmouseout="clearD()" ondblclick="changecolor()"></div>
+    <p id="result">result</p>
+
+    <script>
+        function moveD(e) {
+            var x = e.clientX;
+            var y = e.clientY;
+
+            var value = "coordinates are : (" + x + ", " + y + ")";
+            document.getElementById('result').innerHTML = value;
+        }
+
+        function clearD(){
+            document.getElementById('result').innerHTML = " ";
+        }
+
+        function changecolor(){
+            var tint = document.getElementById('div1');
+            console.log(tint.style.backgroundColor);
+            if(tint.style.backgroundColor == "blue"){
+                document.getElementById('div1').style.backgroundColor = "white"
+            }
+            else{
+                document.getElementById('div1').style.backgroundColor = "blue"
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="input1" onkeypress="return press(event)">
+    <input type="text" id="input2" onkeyup="return press1();" onkeydown="return press2();">
+
+    <script>
+        function press(e){
+            if(e.keyCode == 65 || e.keyCode==97){
+                alert('you pressed a');
+            }
+        }
+        function press1(){
+            document.getElementById('input2').style.backgroundColor = 'red';
+        }
+        function press2(){
+            document.getElementById('input2').style.backgroundColor = 'green';
+        }
+    </script>
+</body>
+</html>

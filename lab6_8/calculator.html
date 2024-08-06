@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="screen">
+    <button onclick="print(1)">1</button>
+    <button onclick="print(2)">2</button>
+    <button onclick="print(3)">3</button>
+    <button onclick="print(4)">4</button>
+    <button onclick="print(5)">5</button>
+    <button onclick="print(6)">6</button>
+    <button onclick="print(7)">7</button>
+    <button onclick="print(8)">8</button>
+    <button onclick="print(9)">9</button>
+    <button onclick="print(0)">0</button>
+    <button onclick="return result()">=</button>
+    <button onclick="operate('+')">+</button>
+    <button onclick="operate('-')">-</button>
+    <button onclick="operate('x')">x</button>
+    <button onclick="operate('/')">/</button>
+
+
+    <script>
+        let screen = document.getElementById('screen');
+        
+        function print(number){
+        
+            screen.value += number;
+        }
+
+        function operate(operator){
+            screen.value += operator;
+        }
+
+        function result(){
+            // let operator;
+            // let display = screen.value;
+            // let firstNum;
+            // console.log(display);
+            
+            // for (let i = 0; i < display.length; i++) {
+            //     if(isNaN(true)){
+            //         firstNum = display.substring(0,i);
+            //         console.log('HEK');
+            //     }
+                
+            // }
+            // console.log(firstNum);
+            let display = screen.value;
+            screen.value = eval(display);
+            
+        }
+    </script>
+</body>
+</html>

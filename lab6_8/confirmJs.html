@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="">
+
+        --Demo reset form-- <br>
+        Enter Number: <input type="text" name="t1" id="t11" value=""><br>
+        <input type="reset" name="cancel" value="reset" onclick="return showConfirmation();">
+    </form>
+
+    <script>
+        function showConfirmation(){
+            var a = confirm('do you want to reset the form ?');
+
+            if(a){
+                alert('u clicked ..yes');
+                return true;
+            }
+            else{
+                alert('u clicked ..no');
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
