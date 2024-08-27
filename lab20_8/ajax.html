@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div><h2>The XMLHttpRequest Object</h2></div>
+    <div id="demo" > Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias obcaecati, hic possimus, nemo cumque eum, eaque odit tempora at aut corrupti nam laborum quidem quibusdam perferendis ullam officia quae voluptatum quisquam pariatur quo voluptatibus!</div>
+
+    <button type="button" onclick="loadDoc()">Change Content</button>
+
+    <script>
+        function loadDoc() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                document.getElementById("demo").innerHTML = this.response;
+            }
+            xhttp.open('GET', 'abc.txt');
+            xhttp.send();
+        }
+    </script>
+</body>
+</html>
